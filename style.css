@@ -1,0 +1,32 @@
+body{
+font-family: Arial;
+text-align:center;
+background:#f4f4f4;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+width:60%;
+background:white;
+}
+
+th,td{
+padding:12px;
+border:1px solid #ddd;
+}
+
+th{
+background:#ff0000;
+color:white;
+}
+
+.paid{
+color:green;
+font-weight:bold;
+}
+
+.pending{
+color:red;
+font-weight:bold;
+}
