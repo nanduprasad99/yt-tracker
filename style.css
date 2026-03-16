@@ -1,29 +1,142 @@
 body{
-font-family: Arial;
-text-align:center;
-background:#f4f4f4;
-}
-
-table{
-margin:auto;
-border-collapse:collapse;
-width:60%;
-background:white;
-}
-
-th,td{
-padding:12px;
-border:1px solid #ddd;
-}
-
-th{
-background:#ff0000;
+font-family:Arial, Helvetica, sans-serif;
+background: radial-gradient(circle at top,#020617,#000);
 color:white;
+text-align:center;
+margin:0;
 }
 
-.paid{
-color:green;
+.title{
+font-size:42px;
+margin-top:40px;
+animation: glow 2s infinite alternate;
+}
+
+.subtitle{
+color:#94a3b8;
+margin-bottom:40px;
+}
+
+#cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+padding:20px;
+}
+
+.card{
+
+width:260px;
+padding:25px;
+border-radius:15px;
+
+background:#0f172a;
+
+box-shadow:0 0 20px rgba(0,0,0,0.8);
+
+transition:0.4s;
+
+animation: fadeIn 1s ease forwards;
+}
+
+.card:hover{
+
+transform:scale(1.07);
+box-shadow:0 0 30px #38bdf8;
+}
+
+/* paid */
+
+.done{
+border-left:6px solid #22c55e;
+}
+
+/* pending */
+
+.pending{
+border-left:6px solid #f59e0b;
+}
+
+/* CURRENT ACTIVE AVENGER */
+
+.active{
+
+border-left:6px solid #38bdf8;
+
+box-shadow:
+0 0 20px #38bdf8,
+0 0 40px #38bdf8,
+0 0 60px #38bdf8;
+
+animation: reactor 2s infinite alternate;
+}
+
+.name{
+
+font-size:22px;
 font-weight:bold;
+margin-bottom:10px;
+}
+
+.date{
+
+color:#94a3b8;
+}
+
+.status{
+
+margin-top:12px;
+font-size:18px;
+font-weight:bold;
+}
+
+/* glowing title */
+
+@keyframes glow{
+
+from{
+text-shadow:0 0 10px #38bdf8;
+}
+
+to{
+text-shadow:0 0 30px #38bdf8;
+}
+
+}
+
+/* card animation */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* arc reactor pulse */
+
+@keyframes reactor{
+
+from{
+box-shadow:
+0 0 20px #38bdf8,
+0 0 40px #38bdf8;
+}
+
+to{
+box-shadow:
+0 0 40px #38bdf8,
+0 0 80px #38bdf8;
+}
+
 }
 
 .pending{
